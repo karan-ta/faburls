@@ -1,0 +1,19 @@
+- desc : Clear Explaination of functors and monads.
+  Author: Aditya Bhargava
+  href: http://adit.io/posts/2013-04-17-functors,_applicatives,_and_monads_in_pictures.html
+  step: 8  
+
+- desc: Solve excercises to become fluent with basic tasks. 
+  Author: Community/Unknown
+  href: https://wiki.haskell.org/H-99:_Ninety-Nine_Haskell_Problems
+  step: 4
+
+- desc: Start Hanging out on irc #haskell freenode.
+  Author: Community
+  href: https://webchat.freenode.net/
+  step: 1
+
+- desc: Start reading a good beginners book on haskell.
+  Author: miran lipovaka
+  href: http://learnyouahaskell.com/
+  step: 2

@@ -1,0 +1,65 @@
+- url      : index.html
+  #url :   :index.html/{topic.name}
+  title    : A curated Collection of <strong>learning paths</strong> for programmers.
+    #topics : FROM topics.yaml ORDER BY position
+    # topics as topic : FROM topics.yaml ORDER BY position
+    # topiclinks: FROM {topic}.yaml Order BY
+  template : index.st
+  requires : [linklist.st]
+  data     :  
+    philosophylinks : FROM philosophy.yaml ORDER BY step LIMIT 5
+    businesslinks : FROM business.yaml ORDER BY step LIMIT 5
+    haskelllinks : FROM haskell.yaml ORDER BY step LIMIT 5
+    metalearninglinks : FROM metalearning.yaml ORDER BY step LIMIT 5
+    conrodlinks : FROM conrod.yaml ORDER BY step LIMIT 5
+    rustlinks : FROM rust.yaml ORDER BY step LIMIT 5
+    spiritualitylinks : FROM spirituality.yaml ORDER BY step LIMIT 5
+
+- url      : haskell.html
+  title    : Learning Path for <strong>haskell</strong>
+  template : links.st
+  requires : [link.st,linkdetail.st]
+  data     :
+    linksbytopic : FROM haskell.yaml ORDER BY step 
+
+- url      : metalearning.html
+  title    : Learning Path for <strong>learning</strong>
+  template : links.st
+  requires : [link.st,linkdetail.st]
+  data     :
+    linksbytopic : FROM metalearning.yaml ORDER BY step 
+
+- url      : business.html
+  title    : Learning Path for <strong>business</strong>
+  template : links.st
+  requires : [link.st,linkdetail.st]
+  data     :
+    linksbytopic : FROM business.yaml ORDER BY step
+
+- url      : philosophy.html
+  title    : Learning Path for <strong>philosophy</strong>
+  template : links.st
+  requires : [link.st,linkdetail.st]
+  data     :
+    linksbytopic : FROM philosophy.yaml ORDER BY step      
+
+- url      : conrod.html
+  title    : Learning Path for <strong>conrod</strong>
+  template : links.st
+  requires : [link.st,linkdetail.st]
+  data     :
+    linksbytopic : FROM conrod.yaml ORDER BY step      
+
+- url      : rust.html
+  title    : Learning Path for <strong>rust</strong>
+  template : links.st
+  requires : [link.st,linkdetail.st]
+  data     :
+    linksbytopic : FROM rust.yaml ORDER BY step      
+
+- url      : spirituality.html
+  title    : Learning Path for <strong>spirituality</strong>
+  template : links.st
+  requires : [link.st,linkdetail.st]
+  data     :
+    linksbytopic : FROM spirituality.yaml ORDER BY step      
