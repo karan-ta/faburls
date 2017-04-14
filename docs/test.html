@@ -48,10 +48,10 @@ $("#submit_btn").click(function(){
 $.ajax('https://api.sendinblue.com/v2.0/user/createdituser',
   {
     type:"POST",
-    api-key:'UYEqR9n6A4GwaNsJ',
+    api-key:"UYEqR9n6A4GwaNsJ",
     
     data:{
-      "email  ": `karan@kodeplay.com`
+      "email": "karan@kodeplay.com"
     },
     success:function(a,b,c){
       console.log( 'mail sent: ', b );
