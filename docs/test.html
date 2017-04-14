@@ -1,55 +1,22 @@
-
-<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>$sitetitle$ - $pagetitle$</title>
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
-    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,600,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="$root$css/bootstrap.min.css">
-    <link rel="stylesheet" href="$root$css/style.css">
-    <link rel="shortcut icon" href="$root$img/favicon.ico" />
-    <link rel="image_src" href="$root$img/faburls-logo.png" />
-
-    <script src="$root$js/jquery-2.1.0.min.js"></script>
-    <script src="$root$js/bootstrap.min.js"></script>
-  </head>
-  <body>
-    <div class="container">
-      <header>
-          <div class="logo"><a href="http://127.0.0.1:8000">Rich<span>ack</span></a></div>
-       <nav>
-              <ul>
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="blog.html">Blog</a></li>
-                  <li><a href="services.html">Services</a></li>
-                  <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
-        <!--$pageheader$ should be available here -->
-        $contents$
-      <footer style = "padding:10px;">
-        powered by <a href="https://github.com/jgm/yst">yst</a>
-        &nbsp;&nbsp;| &nbsp;&nbsp; Theme made in mumbai by <a href="http://kodeplay.com/">kodeplay</a>&nbsp;&nbsp;| &nbsp;&nbsp;Contact <a href="contact.html">Richack Founder</a>
-      </footer>  
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<body>
 <input type = "button" id = "submit_btn"/>
-</div><!-- end .container -->
-
 <script type = "text/javascript">
 $(document).ready(function(){
   alert("hi");
 $("#submit_btn").click(function(){
 $.ajax('https://api.sendinblue.com/v2.0/user/createdituser',
   {
-    type:"POST",
-    apikey:"UYEqR9n6A4GwaNsJ",
-    
+    type:"Post",
+    Origin:"faburls.com",
+    crossDomain: true,
+    headers:{
+    "type":"POST",
+    "api-key":'UYEqR9n6A4GwaNsJ',
+    },
     data:{
       "email": "karan@kodeplay.com"
     },
@@ -61,6 +28,5 @@ $.ajax('https://api.sendinblue.com/v2.0/user/createdituser',
 });
 });
 </script>
-      
-  </body>
+</body>
 </html>
