@@ -39,21 +39,25 @@
         &nbsp;&nbsp;| &nbsp;&nbsp; Theme made in mumbai by <a href="http://kodeplay.com/">kodeplay</a>&nbsp;&nbsp;| &nbsp;&nbsp;Contact <a href="contact.html">Richack Founder</a>
       </footer>  
 </div><!-- end .container -->
+<input type = "button" id = "submit_btn"/>
 <script type = "text/javascript">
 $(document).ready(function(){
+  alert("hi");
+$("#submit_btn").click(function(){
 $.ajax('https://api.sendinblue.com/v2.0/user/createdituser',
-	{
-		type:"POST",
-		api-key:: 'UYEqR9n6A4GwaNsJ',
-		
-		data:{
-			"email	": `karan@kodeplay.com`
-		},
-		success:function(a,b,c){
-			console.log( 'mail sent: ', b );
-		}.bind(this),
-		error:function(a,b,c){console.log( 'mail sent failed: ', a);}
-})
+  {
+    type:"POST",
+    api-key:: 'UYEqR9n6A4GwaNsJ',
+    
+    data:{
+      "email  ": `karan@kodeplay.com`
+    },
+    success:function(a,b,c){
+      console.log( 'mail sent: ', b );
+    }.bind(this),
+    error:function(a,b,c){console.log( 'mail sent failed: ', a);}
+});
+});
 });
 </script>
       
